@@ -1,3 +1,4 @@
+import React from 'react';
 import { Presentation } from './components/Presentation';
 import { CoverSlide } from './slides/CoverSlide';
 import { IntroSlide } from './slides/IntroSlide';
