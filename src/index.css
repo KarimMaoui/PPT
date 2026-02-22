@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  /* Global Liquid Glass Utility to avoid repetition and shadows */
+  .liquid-glass {
+    @apply relative overflow-hidden shadow-none;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.03) 100%);
+    backdrop-filter: blur(24px) saturate(1.4);
+    -webkit-backdrop-filter: blur(24px) saturate(1.4);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+  }
+  .liquid-glass::before {
+    content: '';
+    @apply absolute inset-0 pointer-events-none;
+    background: radial-gradient(circle at top left, rgba(255, 255, 255, 0.15), transparent 50%);
+  }
+}
